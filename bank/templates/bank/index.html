@@ -1,0 +1,7 @@
+{% extends "index.html" %} {% block content %}
+<h1 class="bank__header">Basic Bank System</h1>
+<p class="bank__header-description">
+  Efficient banking with Django: your financial hub, simplified.
+</p>
+<a href="{% url 'bank:customers' %}" class="btn">View all Customers</a>
+{% endblock content %}

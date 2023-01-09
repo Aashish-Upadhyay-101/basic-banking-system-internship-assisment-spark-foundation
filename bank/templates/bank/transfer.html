@@ -1,0 +1,38 @@
+{% extends "index.html" %} {% block content %}
+<h1 class="bank__header">Transfer Money</h1>
+<form
+  style="
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  "
+  class="form"
+  action="{% url 'bank:transfer-balance' %}"
+  method="POST"
+>
+  {% csrf_token %}
+  <label class="label" for="customer">Choose a person to transfer money:</label>
+  <select
+    style="margin-top: 2.4rem; font-size: 1.8rem; padding: 5px"
+    class="select"
+    name="customer"
+    id="cars"
+  >
+    {% for customer in customers %}
+    <option class="option" value="{{customer.user.username}}">
+      {{customer.user.username}}
+    </option>
+    {% endfor %}
+  </select>
+  <br />
+  <input
+    style="font-size: 1.8rem; padding: 5px"
+    class="input"
+    type="text"
+    placeholder="amount ($)"
+    name="amount"
+  /><br />
+  <input class="btn" type="submit" value="Submit" />
+</form>
+{% endblock content %}

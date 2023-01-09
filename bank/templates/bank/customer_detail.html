@@ -1,0 +1,14 @@
+{% extends "index.html" %} {% block content %}
+
+<div class="customer__details">
+  {% include "bank/transferbutton.html" %}
+
+  <h1 class="customer__details-heading">Customer's Detail page</h1>
+  <div>
+    <p class="customer__info">Name: {{customer.user.username}}</p>
+    <p class="customer__info">Email: {{customer.user.email}}</p>
+    <p class="customer__info">Current Balance: {{customer.balance}}</p>
+  </div>
+</div>
+
+{% endblock content %}

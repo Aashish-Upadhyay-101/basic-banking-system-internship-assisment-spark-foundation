@@ -1,0 +1,24 @@
+{% extends "index.html" %} {% block content %}
+
+{% include "bank/transferbutton.html" %}
+
+<h1>List of all customers</h1>
+<table class="customer__table">
+  <tr class="customer__table-row row-heading">
+    <th class="customer__table-heading customer__table-data">Name</th>
+    <th class="customer__table-heading customer__table-data">Balance ($)</th>
+  </tr>
+  {% for customer in customers %}
+  <tr
+    onclick="tableRowClickHandler({{customer.id}})"
+    class="customer__table-row"
+  >
+    <td class="customer__table-data">{{customer.user.username}}</td>
+    <td class="customer__table-data">{{customer.balance}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}
+
+{% include "bank/transferbutton.html" %}</div>
+

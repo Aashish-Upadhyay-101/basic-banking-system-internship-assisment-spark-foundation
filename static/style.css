@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.bank {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bank__header {
+  font-size: 3.2rem;
+  margin-top: 3.6rem;
+}
+
+.bank__header-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgb(72, 138, 237);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(48, 125, 239);
+  cursor: pointer;
+}
+
+.customer__table,
+.customer__table-data {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.customer__table {
+  margin-top: 2.4rem;
+  width: 40rem;
+  border-collapse: collapse;
+}
+
+.customer__table-row {
+  margin: 2.4rem 0;
+}
+
+.customer__table-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.customer__table-data {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.customer__details {
+  margin-top: 3.6rem;
+}
+
+.customer__details > div {
+  margin-top: 2.4rem;
+}
+
+.transfer-btn,
+.customer__details-heading {
+  margin: 2.4rem 0 !important;
+}
+
+.customer__info {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
